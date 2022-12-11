@@ -1,7 +1,8 @@
+#include <iostream>
+
+#include <glad/glad.h>
 #include <GLFW/glfw3.h>
 #include <glm/glm.hpp>
-
-#include <iostream>
 
 void processInput(GLFWwindow* window);
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
@@ -25,6 +26,7 @@ int main()
         return -1;
     }
     glfwMakeContextCurrent(window);
+    gladLoadGL();
     glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
 
     while (!glfwWindowShouldClose(window))
